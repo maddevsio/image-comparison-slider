@@ -1,28 +1,30 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <BeforeAfter
+      :value="50"
+      :step="0.01"
+      beforeImage="https://d6xkme6dcvajw.cloudfront.net/images/Cases/godee/png/application-before.png"
+      afterImage="https://d6xkme6dcvajw.cloudfront.net/images/Cases/godee/png/application-after.png"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BeforeAfter from './components/BeforeAfter.vue'
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
+    BeforeAfter
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  height: 100vh;
 }
 </style>
