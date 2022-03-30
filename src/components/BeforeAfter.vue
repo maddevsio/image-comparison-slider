@@ -10,8 +10,7 @@
       min="0"
       max="100"
       :step="step"
-      :value="compareWidth"
-      @input="handleInput"
+      v-model="compareWidth"
       tabindex="-1"
     />
     <div
@@ -95,10 +94,6 @@ export default {
   },
 
   methods: {
-    handleInput(e) {
-      this.compareWidth = e.target.value
-    },
-
     resizeHandler() {
       this.width = this.$refs.imageWrapper.getBoundingClientRect().width
     }
@@ -114,7 +109,7 @@ export default {
 
 .compare-overlay {
   position: absolute;
-  overflow:hidden;
+  overflow: hidden;
   height: auto;
   top:0;
 }

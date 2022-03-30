@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import BeforeAfter from './components/BeforeAfter.vue'
+import BeforeAfter from '@/components/BeforeAfter.vue'
 
 export default {
   name: 'App',
